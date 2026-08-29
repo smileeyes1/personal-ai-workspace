@@ -1,0 +1,38 @@
+name: Enterprise Auth Injection
+
+on:
+  push:
+    branches: [main, feat/enterprise-education-platform]
+    paths:
+      - 'index.html'
+      - 'enterprise-auth.js'
+      - 'scripts/inject-enterprise-auth.mjs'
+      - '.github/workflows/enterprise-auth-injection.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  inject:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Inject enterprise auth loader
+        run: node scripts/inject-enterprise-auth.mjs
+      - name: Commit generated change
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          if git diff --cached --quiet; then
+            echo 'No generated change.'
+          else
+            git commit -m 'build: inject enterprise authentication loader'
+            git push
+          fi
