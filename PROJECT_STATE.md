@@ -21,10 +21,12 @@ Deliver a professional, production-ready HAKIM EDU Ω that teachers can use thro
 - Institutional App Registration created by the user in Microsoft Entra ID.
 - Supported account type: Single tenant — Tubas Directorate of Education.
 - Application (client) ID: `c22595eb-cb64-4897-92a1-d49dc179064e`
-- Production SPA redirect URI intended for the current deployment: `https://smileeyes1.github.io/personal-ai-workspace/login.html`
+- Production SPA redirect URI: `https://smileeyes1.github.io/personal-ai-workspace/login.html`
 - Client ID is public application configuration; no client secret is stored or requested.
-- `m365-config.js` now supplies the client ID to `login.html`.
-- Microsoft recommends exact registered redirect URI matching and SPA authorization-code flow with PKCE.
+- `m365-config.js` supplies the client ID to `login.html`.
+- Initial `loginPopup()` implementation produced `block_nested_popups` in the user's mobile/embedded context.
+- Fixed in commit `e76045ce6c058c154829ad7fceb6184b6018ad46`: authentication now uses MSAL `loginRedirect()` and calls `handleRedirectPromise()` after initialization before any new interaction. `storeAuthStateInCookie` is enabled as a compatibility hardening measure.
+- Microsoft recommends completing redirect handling before another interactive API and supports redirect APIs for MSAL browser flows.
 - Live sign-in remains subject to the Entra registration having the exact SPA redirect URI and required consent/permissions.
 
 ## Target architecture
@@ -81,7 +83,7 @@ Do not wait for user confirmation for non-critical technical decisions. Use avai
 Real Microsoft tenant configuration, institutional Graph consent, production secrets, and organization-owned policies require authorized institutional access. Build and validate all non-secret scaffolding and integration paths before these gates.
 
 ## Current milestone
-Verify the newly configured Microsoft 365 login deployment, then harden and integrate the Agent Kernel, Graph scaffolding, AI gateway, knowledge layer, educational engine, automation, QA/security, and production verification.
+Re-test the deployed Microsoft 365 login using redirect flow after the `block_nested_popups` fix. If authentication passes, harden tenant validation and then continue with Graph scaffolding, AI gateway, knowledge layer, educational engine, automation, QA/security, and production verification.
 
 ## Blockers
-No project blocker recorded. External institutional credentials/consent are a future release gate for live Microsoft tenant operations, not a reason to stop independent development.
+No known code blocker. Live Microsoft tenant consent/permissions remain external release gates for Graph operations.
