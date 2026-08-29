@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f766e">
+<title>تسجيل الدخول — HAKIM EDU Ω</title>
+<script src="https://cdn.jsdelivr.net/npm/@azure/msal-browser@5.4.0/lib/msal-browser.min.js"></script>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:linear-gradient(145deg,#f8fafc,#ecfdf5);color:#0f172a;display:grid;place-items:center;padding:20px}.card{width:min(470px,100%);background:#fff;border:1px solid #dbe4ea;border-radius:26px;padding:34px;box-shadow:0 24px 80px #0f172a18;text-align:center}.logo{width:72px;height:72px;border-radius:20px;margin:0 auto 18px;display:grid;place-items:center;background:linear-gradient(135deg,#0f766e,#14b8a6);color:#fff;font-size:38px;font-weight:900}.brand{font-size:27px;font-weight:900;margin-bottom:7px}.sub{color:#64748b;line-height:1.8;font-size:14px;margin-bottom:25px}.ms{width:100%;border:0;border-radius:13px;background:#0f766e;color:#fff;padding:14px 18px;font-size:15px;font-weight:800;cursor:pointer}.ms:hover{background:#115e59}.status{margin-top:17px;padding:12px;border-radius:11px;background:#f8fafc;color:#64748b;font-size:12px;line-height:1.7}.hidden{display:none}.error{background:#fff1f2;color:#be123c}.ok{background:#ecfdf5;color:#047857}.foot{margin-top:22px;color:#94a3b8;font-size:11px}.spinner{display:inline-block;width:14px;height:14px;border:2px solid #ffffff66;border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;vertical-align:-2px;margin-left:7px}@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<main class="card">
+<div class="logo">Ω</div>
+<div class="brand">HAKIM EDU Ω</div>
+<div class="sub">منظومة التعليم المؤسسية<br>الدخول باستخدام حساب Microsoft 365 المؤسسي</div>
+<button id="login" class="ms">الدخول بحساب Microsoft 365</button>
+<div id="status" class="status">يتم التحقق من إعداد هوية المؤسسة…</div>
+<div class="foot">الدخول محكوم بهوية المؤسسة والصلاحيات المصرح بها.</div>
+</main>
+<script>
+'use strict';
+const CONFIG={
+  clientId:'',
+  authority:'https://login.microsoftonline.com/organizations',
+  redirectUri:location.origin+location.pathname
+};
+const status=document.getElementById('status'),button=document.getElementById('login');
+function setStatus(t,c=''){status.textContent=t;status.className='status '+c}
+async function start(){
+  if(!CONFIG.clientId){
+    setStatus('هوية Microsoft 365 المؤسسية لم تُفعّل لهذا الإصدار بعد. لا يمكن بدء مصادقة حقيقية دون تسجيل تطبيق HAKIM في Microsoft Entra ID.','error');
+    button.disabled=true;button.style.opacity='.55';return;
+  }
+  try{
+    setStatus('جاري تجهيز تسجيل الدخول…');
+    const app=new msal.PublicClientApplication({auth:CONFIG,cache:{cacheLocation:'sessionStorage'}});
+    await app.initialize();
+    button.onclick=async()=>{
+      try{button.innerHTML='<span class="spinner"></span>جاري فتح Microsoft 365…';const r=await app.loginPopup({scopes:['User.Read'],prompt:'select_account'});localStorage.setItem('hakim_m365_account',JSON.stringify({name:r.account.name,email:r.account.username,tenantId:r.account.idTokenClaims?.tid||'',loggedAt:new Date().toISOString()}));setStatus('تم تسجيل الدخول بنجاح. جارٍ فتح المنظومة…','ok');location.href='index.html';}
+      catch(e){setStatus('تعذر تسجيل الدخول: '+(e.message||e),'error');button.textContent='الدخول بحساب Microsoft 365'}
+    };
+    setStatus('جاهز لتسجيل الدخول بحساب Microsoft 365.');
+  }catch(e){setStatus('تعذر تهيئة Microsoft Entra: '+(e.message||e),'error')}
+}
+start();
+</script>
+</body>
+</html>
