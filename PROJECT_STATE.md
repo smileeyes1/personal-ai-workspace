@@ -17,6 +17,16 @@ Deliver a professional, production-ready HAKIM EDU Ω that teachers can use thro
 - Target users: Palestinian teachers first; then students, families, schools, directorates, and Ministry users within authorization.
 - Existing Agent Kernel/governance work is retained and must not be broken.
 
+## Microsoft 365 identity checkpoint
+- Institutional App Registration created by the user in Microsoft Entra ID.
+- Supported account type: Single tenant — Tubas Directorate of Education.
+- Application (client) ID: `c22595eb-cb64-4897-92a1-d49dc179064e`
+- Production SPA redirect URI intended for the current deployment: `https://smileeyes1.github.io/personal-ai-workspace/login.html`
+- Client ID is public application configuration; no client secret is stored or requested.
+- `m365-config.js` now supplies the client ID to `login.html`.
+- Microsoft recommends exact registered redirect URI matching and SPA authorization-code flow with PKCE.
+- Live sign-in remains subject to the Entra registration having the exact SPA redirect URI and required consent/permissions.
+
 ## Target architecture
 1. Agent kernel and durable mission state
 2. Microsoft Entra ID / Microsoft 365 identity and RBAC
@@ -71,7 +81,7 @@ Do not wait for user confirmation for non-critical technical decisions. Use avai
 Real Microsoft tenant configuration, institutional Graph consent, production secrets, and organization-owned policies require authorized institutional access. Build and validate all non-secret scaffolding and integration paths before these gates.
 
 ## Current milestone
-Harden and integrate the Agent Kernel with the existing application, then proceed through Microsoft 365 identity/Graph scaffolding, AI gateway, knowledge layer, educational engine, automation, QA/security, and production verification.
+Verify the newly configured Microsoft 365 login deployment, then harden and integrate the Agent Kernel, Graph scaffolding, AI gateway, knowledge layer, educational engine, automation, QA/security, and production verification.
 
 ## Blockers
 No project blocker recorded. External institutional credentials/consent are a future release gate for live Microsoft tenant operations, not a reason to stop independent development.
