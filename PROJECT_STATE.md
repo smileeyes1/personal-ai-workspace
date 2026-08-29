@@ -9,10 +9,11 @@ The user is a non-technical end user. The agent leads execution, uses available 
 ## Current baseline
 - Repository: `smileeyes1/personal-ai-workspace`
 - Default branch: `main`
-- Latest known commit: `e4a1cde578fb8e0a5d68d6cd504e9d754a4b1dc3`
+- Latest code commits at this checkpoint: `41e0f18` (institutional auth gate), `1f0fa01` (CI identity-layer validation), followed by this state update.
 - HAKIM EDU Ω product vision and operating model documented.
 - Resumable mission kernel and governance tests added.
-- GitHub quality/deployment checks previously reported successful.
+- Existing app loads `enterprise-auth.js` and `enterprise-graph.js`.
+- Institutional Microsoft 365 sign-in is now enforced at the browser gate for protected production use.
 
 ## Target architecture
 1. Agent kernel and durable mission state
@@ -43,7 +44,7 @@ The user is a non-technical end user. The agent leads execution, uses available 
 If the ChatGPT conversation stops, resume by reading this file, inspecting the latest GitHub commit, CI status, and changed files. Continue from the first incomplete milestone; do not restart or ask the user to reconstruct technical context.
 
 ## Current next milestone
-Implement and verify the production-grade Agent Kernel integration with durable mission state and explicit action authorization, then connect it to the existing UI/API without breaking current functionality.
+Complete server-side Microsoft identity validation and tenant/role authorization, then harden Graph/Teams actions behind explicit authorization and audit controls. After that, proceed to durable agent execution and production integration.
 
-## Blockers
-None recorded at this checkpoint. External institutional credentials/consent are required only when reaching real Microsoft tenant/Graph/Teams operations; build all non-secret integration scaffolding and validation before that gate.
+## External gate
+Real institutional login cannot be fully activated until an authorized Microsoft 365 administrator registers/approves the HAKIM Entra application and supplies the public Client ID / permitted Tenant configuration. This is an institutional authorization boundary, not a missing code task. No production secret belongs in GitHub.
