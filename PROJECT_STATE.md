@@ -4,16 +4,18 @@
 Build a Palestinian educational agentic operating system centered on supporting teachers, reducing workload, improving learning, and serving students, families, schools, directorates, and the Ministry within authorized institutional boundaries.
 
 ## Operating rule
-The user is a non-technical end user. The agent leads execution, uses available tools, chooses non-critical implementation decisions, validates work, and resumes from repository state rather than relying on chat continuity.
+The user is a non-technical end user. The agent leads execution, uses available tools, chooses non-critical implementation decisions, validates work, and resumes from repository state rather than relying on chat continuity. Do not make the user manage technical execution.
+
+## Product goal
+Deliver a professional, production-ready HAKIM EDU Ω that teachers can use through their institutional Microsoft 365 identity, with agentic task execution, educational intelligence, automation, quality assurance, security, and Microsoft 365/Teams integration.
 
 ## Current baseline
 - Repository: `smileeyes1/personal-ai-workspace`
 - Default branch: `main`
-- Latest code commits at this checkpoint: `41e0f18` (institutional auth gate), `1f0fa01` (CI identity-layer validation), followed by this state update.
-- HAKIM EDU Ω product vision and operating model documented.
-- Resumable mission kernel and governance tests added.
-- Existing app loads `enterprise-auth.js` and `enterprise-graph.js`.
-- Institutional Microsoft 365 sign-in is now enforced at the browser gate for protected production use.
+- Product identity: HAKIM EDU Ω
+- Primary production identity: Microsoft 365 institutional account via Microsoft Entra ID.
+- Target users: Palestinian teachers first; then students, families, schools, directorates, and Ministry users within authorization.
+- Existing Agent Kernel/governance work is retained and must not be broken.
 
 ## Target architecture
 1. Agent kernel and durable mission state
@@ -21,7 +23,7 @@ The user is a non-technical end user. The agent leads execution, uses available 
 3. Microsoft Graph Education integration
 4. Teams integration and authorized teaching workflows
 5. AI model router with Gemini and safe fallbacks
-6. Knowledge/RAG layer grounded in authoritative educational sources
+6. Knowledge/RAG grounded in authoritative educational sources
 7. Palestinian curriculum and pedagogy engine
 8. Evidence, truth, Islamic-values, privacy, and safety guards
 9. Output quality and adversarial QA
@@ -29,6 +31,18 @@ The user is a non-technical end user. The agent leads execution, uses available 
 11. Student learning and intervention intelligence
 12. Observability, audit, recovery, and security
 13. Production deployment and end-to-end verification
+
+## Product behavior
+The teacher should express a goal in natural language. The system converts it into a managed mission:
+Understand → gather context → retrieve evidence → plan → execute → verify → adversarial-check → repair → regression-test → request approval when required → perform authorized external actions → audit → deliver → learn.
+
+The system should be autonomous where safe and require human authorization for consequential actions. Capability never implies authority.
+
+## Microsoft 365 direction
+Production sign-in is institutional Microsoft 365 / Entra ID. The intended UX is: Sign in with Microsoft 365 → validate tenant/account/role → load authorized institutional context. Microsoft Graph is integrated incrementally with least privilege. Teams, SharePoint/OneDrive, Calendar, Assignments and education resources are enabled only when authorized.
+
+## Teaching-agent direction
+Future authorized modes: Teacher Copilot → Co-Teacher → Authorized Substitute Agent → multimodal/voice Teaching Twin. AI voice/avatar must be clearly disclosed as synthetic and must never be represented as the real teacher.
 
 ## Non-negotiable quality gates
 - Never claim execution or verification without evidence.
@@ -40,11 +54,24 @@ The user is a non-technical end user. The agent leads execution, uses available 
 - AI-generated educational outputs require validation before delivery.
 - Mathematical visual order and numeric visual counts are explicit and testable.
 
-## Continuity / recovery
-If the ChatGPT conversation stops, resume by reading this file, inspecting the latest GitHub commit, CI status, and changed files. Continue from the first incomplete milestone; do not restart or ask the user to reconstruct technical context.
+## Continuity contract
+This file is the durable handoff for future ChatGPT sessions. If the conversation stops, a new session must:
+1. Read `PROJECT_STATE.md` first.
+2. Inspect the latest `main` commit and changed files.
+3. Inspect current CI/deployment status.
+4. Identify the first incomplete milestone.
+5. Continue execution from that point without asking the user to reconstruct prior technical context.
+6. Update this file after each material milestone with completed work, verification evidence, failures, blockers, and the exact next milestone.
+7. Never restart the project merely because the chat changed.
 
-## Current next milestone
-Complete server-side Microsoft identity validation and tenant/role authorization, then harden Graph/Teams actions behind explicit authorization and audit controls. After that, proceed to durable agent execution and production integration.
+## Execution discipline
+Do not wait for user confirmation for non-critical technical decisions. Use available tools. If a tool/path fails, diagnose, choose an alternative, retry, and verify. Stop only for a genuine external authority/credential requirement or an unresolved critical failure; record it explicitly and continue all independent work.
 
-## External gate
-Real institutional login cannot be fully activated until an authorized Microsoft 365 administrator registers/approves the HAKIM Entra application and supplies the public Client ID / permitted Tenant configuration. This is an institutional authorization boundary, not a missing code task. No production secret belongs in GitHub.
+## External gates
+Real Microsoft tenant configuration, institutional Graph consent, production secrets, and organization-owned policies require authorized institutional access. Build and validate all non-secret scaffolding and integration paths before these gates.
+
+## Current milestone
+Harden and integrate the Agent Kernel with the existing application, then proceed through Microsoft 365 identity/Graph scaffolding, AI gateway, knowledge layer, educational engine, automation, QA/security, and production verification.
+
+## Blockers
+No project blocker recorded. External institutional credentials/consent are a future release gate for live Microsoft tenant operations, not a reason to stop independent development.
