@@ -16,7 +16,7 @@ jobs:
     timeout-minutes: 10
     env:
       NODE_ENV: test
-      GEMINI_API_KEY: ''
+      GEMINI_API_KEY: test-key
       GROQ_API_KEY: ''
       CLOUDFLARE_API_TOKEN: ''
       OPENROUTER_API_KEY: ''
@@ -39,9 +39,37 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Start application for integration tests
+        run: |
+          nohup npm start > /tmp/hakim-server.log 2>&1 &
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:3000/api/health > /tmp/health.json; then
+              cat /tmp/health.json
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/hakim-server.log
+          exit 1
+
       - name: Test
         run: npm test
 
-      - name: Keyless startup guard
+      - name: Runtime smoke check
+        run: curl -fsS http://127.0.0.1:3000/api/health
+
+      - name: Keyless-safe startup guard
+        env:
+          GEMINI_API_KEY: ''
         run: |
-          node -e "import('./server.js').then(() => setTimeout(() => process.exit(0), 500)).catch(e => { console.error(e); process.exit(1) })"
+          pkill -f 'node server.js' || true
+          nohup npm start > /tmp/hakim-keyless.log 2>&1 &
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:3000/api/health > /tmp/keyless-health.json; then
+              grep -q '"localDeterministic":"READY"' /tmp/keyless-health.json
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/hakim-keyless.log
+          exit 1
