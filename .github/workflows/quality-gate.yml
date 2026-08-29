@@ -34,6 +34,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Validate browser identity layer syntax
+        run: node --check enterprise-auth.js && node --check enterprise-graph.js && grep -q 'src="/enterprise-auth.js"' index.html
+
       - name: Build
         run: npm run build
 
