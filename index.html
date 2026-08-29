@@ -1,1 +1,1809 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0f172a"><title>HAKIM Ω — مساحة العمل التعليمية</title><script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.8.0/mammoth.browser.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/docx/8.5.0/docx.umd.min.js"></script><style>:root{--nav:#0b1220;--nav2:#111b2e;--bg:#f4f7fb;--card:#fff;--text:#142033;--muted:#718096;--line:#e2e8f0;--brand:#3157d5;--brand2:#5b72e8;--soft:#eef2ff;--ok:#087443;--warn:#a15c00;--danger:#b42318}*{box-sizing:border-box}html,body{margin:0;height:100%;font-family:system-ui,-apple-system,"Noto Sans Arabic",Arial,sans-serif;background:var(--bg);color:var(--text)}button,input,select,textarea{font:inherit}.app{height:100dvh;display:flex}.sidebar{width:286px;background:linear-gradient(180deg,var(--nav),var(--nav2));color:#fff;padding:16px;display:flex;flex-direction:column;gap:12px}.brand{display:flex;align-items:center;gap:10px;padding:6px 4px 14px}.logo{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,#7187ff,#3157d5);display:grid;place-items:center;font-weight:900}.brand b{font-size:19px}.brand small{display:block;color:#9aa8bd;margin-top:2px}.nav{display:grid;gap:6px}.nav button,.sidebtn{border:1px solid #26344b;background:#162238;color:#dbe4f4;border-radius:12px;padding:11px 12px;text-align:right;cursor:pointer}.nav button.active{background:#263a68;border-color:#4865b5;color:#fff}.sideSpacer{flex:1}.mini{font-size:12px;color:#91a0b5;line-height:1.7;padding:4px}.main{min-width:0;flex:1;display:flex;flex-direction:column}.top{height:66px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 20px}.topTitle{font-weight:800}.status{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:7px}.dot{width:8px;height:8px;border-radius:50%;background:#94a3b8}.dot.ok{background:#16a34a}.workspace{flex:1;min-height:0;overflow:auto;padding:18px}.view{max-width:1180px;margin:auto}.hero{display:grid;grid-template-columns:1.4fr .8fr;gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 3px 15px #17203308}.heroMain{padding:25px}.hero h1{margin:0 0 8px;font-size:30px}.muted{color:var(--muted)}.pills{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}.pill{background:var(--soft);color:#2943a3;border-radius:999px;padding:6px 10px;font-size:12px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.stat{padding:14px;background:#f8fafc;border:1px solid var(--line);border-radius:14px}.stat b{display:block;font-size:24px}.sectionTitle{display:flex;align-items:center;justify-content:space-between;margin:20px 0 10px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.action{cursor:pointer}.action h3{margin:5px 0 4px;font-size:16px}.action p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}.icon{font-size:22px}.chat{max-width:950px;margin:auto}.messages{min-height:52vh}.msg{display:flex;margin:13px 0}.bubble{max-width:90%;padding:13px 16px;border-radius:17px;white-space:pre-wrap;line-height:1.85;overflow-wrap:anywhere}.user{justify-content:flex-start}.user .bubble{background:var(--soft)}.assistant{justify-content:flex-end}.assistant .bubble{background:#fff;border:1px solid var(--line)}.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.chip{background:#eef0f4;padding:5px 8px;border-radius:8px;font-size:12px}.composer{position:sticky;bottom:0;padding:12px 0;background:linear-gradient(180deg,#f4f7fb00,#f4f7fb 20%)}.box{background:#fff;border:1px solid #d9e0ea;border-radius:18px;padding:10px;box-shadow:0 8px 25px #1720330d}.textarea{width:100%;min-height:62px;max-height:220px;border:0;outline:0;resize:vertical}.actions{display:flex;gap:7px;align-items:center}.btn{border:0;border-radius:11px;padding:10px 13px;cursor:pointer;background:#eef0f4;color:var(--text)}.primary{background:var(--brand);color:#fff}.hidden{display:none}.panel{display:none}.panel.active{display:block}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:5px}.field input,.field select{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fff}.modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:16px;z-index:20}.modal.show{display:flex}.modalCard{background:#fff;width:min(650px,96%);max-height:90dvh;overflow:auto;padding:22px;border-radius:20px}.row{display:flex;gap:8px;flex-wrap:wrap}.note{font-size:12px;color:var(--muted);line-height:1.7}.download button{margin:5px 4px 0 0}.toast{position:fixed;bottom:20px;left:20px;background:#111827;color:#fff;padding:11px 14px;border-radius:11px;display:none;z-index:30}.toast.show{display:block}@media(max-width:900px){.sidebar{width:220px}.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:680px){.sidebar{display:none}.workspace{padding:12px}.grid,.formgrid{grid-template-columns:1fr}.top{padding:0 12px}.hero h1{font-size:25px}.bubble{max-width:96%}}</style></head><body><div class="app"><aside class="sidebar"><div class="brand"><div class="logo">ح</div><div><b>حكيم Ω</b><small>مساحة العمل التعليمية</small></div></div><div class="nav"><button class="active" data-view="home">⌂ الرئيسية</button><button data-view="chat">◉ المحادثة مع حكيم</button><button data-view="competencies">◆ الكفايات</button><button data-view="library">▣ المصادر والملفات</button></div><div class="sideSpacer"></div><div class="mini">نظام العمل: الهدف → الكفاية → النشاط → التقويم → التحقق → الإخراج</div><button class="sidebtn" id="settingsBtn">⚙ الإعدادات</button></aside><main class="main"><header class="top"><span class="topTitle" id="topTitle">الرئيسية</span><span class="status"><i class="dot" id="dot"></i><span id="status">محلي — Gemini اختياري</span></span></header><section class="workspace"><div id="home" class="view panel active"><div class="hero"><div class="card heroMain"><div class="pills"><span class="pill">HAKIM Ω</span><span class="pill">تعليم أساسي</span><span class="pill">تحقق قبل التسليم</span></div><h1>مرحبًا بك في حكيم</h1><p class="muted">مساعدك التعليمي لتحويل الهدف التربوي إلى مخرج قابل للتنفيذ والتحقق.</p><div class="pills"><span class="pill">الكفايات</span><span class="pill">الدروس</span><span class="pill">أوراق العمل</span><span class="pill">التقويم</span><span class="pill">الملفات</span></div></div><div class="card stats"><div class="stat"><span class="muted">المشاريع</span><b id="statProjects">٠</b></div><div class="stat"><span class="muted">الملفات</span><b id="statFiles">٠</b></div><div class="stat"><span class="muted">الكفايات</span><b id="statComp">٠</b></div><div class="stat"><span class="muted">الحالة</span><b style="font-size:16px">جاهز</b></div></div></div><div class="sectionTitle"><h2>ابدأ بمهمة</h2><span class="muted">اختر المسار أو تحدث مباشرة</span></div><div class="grid"><div class="card action" data-action="lesson"><div class="icon">📘</div><h3>ابنِ درسًا</h3><p>هدف واحد، نشاط، تطبيق، تقويم، وتغذية راجعة.</p></div><div class="card action" data-action="worksheet"><div class="icon">📝</div><h3>ورقة عمل</h3><p>مخرج قابل للطباعة ومناسب للمرحلة.</p></div><div class="card action" data-action="assessment"><div class="icon">🎯</div><h3>تقويم</h3><p>أسئلة ومؤشرات وقرار تعليمي واضح.</p></div><div class="card action" data-action="competency"><div class="icon">◆</div><h3>خريطة كفاية</h3><p>ربط الكفاية بالمهارات والمؤشرات والأنشطة.</p></div><div class="card action" data-action="analyze"><div class="icon">🔎</div><h3>حلّل ملفًا</h3><p>اقرأ المصدر ثم استخرج المهم دون ادعاءات.</p></div><div class="card action" data-action="chat"><div class="icon">💬</div><h3>تحدث مع حكيم</h3><p>اكتب طلبك طبيعيًا واترك اختيار المسار لحكيم.</p></div></div></div><div id="chat" class="view panel"><div class="chat"><div class="messages" id="messages"><div class="welcome card"><h2>حكيم معك</h2><p class="muted">تحدث طبيعيًا. يمكنك إرفاق مصادر، ثم اطلب من حكيم تحليلها أو بناء درس أو ورقة عمل أو تقويم.</p></div></div><div class="composer"><div class="box"><div id="files" class="chips"></div><textarea id="prompt" class="textarea" placeholder="مثال: اقرأ الملف وحدد الكفاية المناسبة ثم ابنِ نشاطًا للصف الأول…"></textarea><div class="actions"><button class="btn" id="attach">📎 إرفاق</button><input id="fileInput" class="hidden" type="file" multiple accept=".txt,.md,.csv,.json,.html,.pdf,.docx,.xlsx,.xls,.png,.jpg,.jpeg,.webp"><span style="flex:1"></span><button class="btn primary" id="send">إرسال ➤</button></div></div></div></div></div><div id="competencies" class="view panel"><div class="card"><h2>محرك الكفايات</h2><p class="muted">أدخل الكفاية أو دع حكيم يستخرجها من المصدر.</p><div class="formgrid"><div class="field"><label>الصف</label><select id="grade"><option>الصف الأول</option><option>الصف الثاني</option></select></div><div class="field"><label>المادة</label><select id="subject"><option>الرياضيات</option><option>اللغة العربية</option><option>العلوم</option><option>التربية الإسلامية</option></select></div></div><div style="margin-top:12px"><button class="btn primary" id="buildComp">بناء خريطة الكفاية</button></div><div id="compResult" class="card" style="margin-top:14px;display:none"></div></div></div><div id="library" class="view panel"><div class="card"><h2>المصادر والملفات</h2><p class="muted">ارفع ملفاتك من هنا أو من داخل المحادثة. تُقرأ محليًا قبل إرسال محتواها للمحرك.</p><button class="btn primary" id="libraryAttach">📎 إضافة ملفات</button><div id="libraryList" style="margin-top:14px"></div></div></div></section></main></div><div class="modal" id="settings"><div class="modalCard"><h2>إعدادات حكيم Ω</h2><div class="field"><label>Gemini API Key — اختياري</label><input id="key" type="password" autocomplete="off" placeholder="ألصق المفتاح هنا"></div><div class="field"><label>النموذج</label><select id="model"><option value="gemini-2.5-flash">gemini-2.5-flash</option><option value="gemini-2.5-pro">gemini-2.5-pro</option></select></div><div class="row"><button class="btn primary" id="save">حفظ واختبار</button><button class="btn" id="clear">حذف المفتاح</button><button class="btn" id="close">إغلاق</button></div><p id="test" class="note"></p><p class="note">المفتاح محفوظ محليًا في المتصفح فقط. لا يُرفع إلى GitHub. لا توجد آلية آمنة لتجاوز حصص مزود الذكاء.</p></div></div><div id="toast" class="toast"></div><script>pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';const $=id=>document.getElementById(id),KEY='hakim_omega_key',MODEL='hakim_omega_model',DB='hakim_omega_state';let files=[],history=[],lastOutput='';const state=JSON.parse(localStorage.getItem(DB)||'{"projects":0,"competencies":0}');function saveState(){localStorage.setItem(DB,JSON.stringify(state));$('statProjects').textContent=state.projects.toLocaleString('ar');$('statComp').textContent=state.competencies.toLocaleString('ar');$('statFiles').textContent=files.length.toLocaleString('ar')}function toast(t){$('toast').textContent=t;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2500)}function status(){const k=localStorage.getItem(KEY);$('status').textContent=k?'Gemini جاهز ✓':'محلي — Gemini اختياري';$('dot').className='dot '+(k?'ok':'')}function switchView(id){document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));$(id).classList.add('active');document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===id));$('topTitle').textContent=id==='home'?'الرئيسية':id==='chat'?'المحادثة مع حكيم':id==='competencies'?'الكفايات':'المصادر والملفات'}document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));document.querySelectorAll('.action').forEach(a=>a.onclick=()=>{const k=a.dataset.action;if(k==='chat'){switchView('chat');$('prompt').focus();return}switchView('chat');const prompts={lesson:'ابنِ لي درسًا متكاملًا للصف الأول: هدف واحد، نشاط واحد، محسوس ثم مصور ثم رمزي ثم تطبيق ثم تحقق وتقويم سريع.',worksheet:'أنشئ ورقة عمل للصف الأول وفق الهدف الذي سأحدده، مع إخراج واضح وقابل للطباعة.',assessment:'أنشئ تقويمًا قصيرًا من ٥ أسئلة مع مفتاح إجابة ومعيار إتقان.',competency:'حلّل المهمة وحدد الكفاية والمهارات والمؤشرات والأنشطة المناسبة.',analyze:'سأرفق ملفًا. اقرأه فعليًا واستخرج منه الحقائق والكفايات والمخرجات دون اختلاق.',};$('prompt').value=prompts[k]||'';switchView('chat')});function dataURL(f){return new Promise((r,j)=>{const x=new FileReader();x.onload=()=>r(x.result);x.onerror=j;x.readAsDataURL(f)})}async function extract(f){const e=f.name.split('.').pop().toLowerCase();if(['txt','md','csv','json','html'].includes(e))return{name:f.name,type:'text',text:await f.text()};if(e==='docx'){const r=await mammoth.extractRawText({arrayBuffer:await f.arrayBuffer()});return{name:f.name,type:'text',text:r.value}}if(['xlsx','xls'].includes(e)){const w=XLSX.read(await f.arrayBuffer(),{type:'array'});return{name:f.name,type:'text',text:w.SheetNames.map(s=>'['+s+']\n'+XLSX.utils.sheet_to_csv(w.Sheets[s])).join('\n')}}if(e==='pdf'){const p=await pdfjsLib.getDocument({data:await f.arrayBuffer()}).promise;let out='';for(let i=1;i<=Math.min(p.numPages,120);i++){const pg=await p.getPage(i),c=await pg.getTextContent();out+='\n[صفحة '+i+']\n'+c.items.map(x=>x.str).join(' ')}return{name:f.name,type:'text',text:out}}if(f.type.startsWith('image/'))return{name:f.name,type:'image',mime:f.type,data:(await dataURL(f)).split(',')[1]};throw Error('نوع الملف غير مدعوم')}async function addFiles(list){for(const f of list){try{files.push(await extract(f));toast('تمت قراءة '+f.name)}catch(e){toast('تعذر قراءة '+f.name)}}renderFiles();saveState()}function renderFiles(){const html=files.map(f=>'<span class="chip">'+escapeHtml(f.name)+'</span>').join('');$('files').innerHTML=html;$('libraryList').innerHTML=files.length?files.map(f=>'<div class="card" style="margin-top:8px;padding:10px"><b>'+escapeHtml(f.name)+'</b><div class="note">'+(f.type==='image'?'صورة':'محتوى مقروء محليًا')+'</div></div>').join(''):'<p class="muted">لا توجد ملفات محملة.</p>';saveState()}$('attach').onclick=()=>$('fileInput').click();$('libraryAttach').onclick=()=>$('fileInput').click();$('fileInput').onchange=e=>addFiles([...e.target.files]);function msg(role,text,names=[]){document.querySelector('.welcome')?.remove();const d=document.createElement('div');d.className='msg '+role;const b=document.createElement('div');b.className='bubble';b.textContent=text;if(names.length){const c=document.createElement('div');c.className='chips';names.forEach(n=>{const x=document.createElement('span');x.className='chip';x.textContent=n;c.appendChild(x)});b.appendChild(c)}d.appendChild(b);$('messages').appendChild(d);$('messages').parentElement.scrollTop=1e9;return b}function systemPrompt(){return `أنت HAKIM Ω، مساعد تعليمي مهني للصفوف الأولى. افهم الغاية قبل الصياغة. اربط كل ناتج بالهدف والكفاية والمؤشر عندما تتوفر البيانات. لا تخترع مصدرًا أو نسبة أو نصًا دينيًا. افصل الحقيقة عن الاستنتاج والافتراض. عند الرياضيات البصرية: لا تعتمد على RTL/BiDi لترتيب التعبير؛ ابنِ الترتيب بصريًا صراحة، وإذا طُلبت الصيغة النهائية العربية الرياضية فاحترمها حرفيًا. عند الرسوم العددية: القيمة = العدد المطلوب من العناصر، ثم تحقق من العد. اجعل المخرجات عملية ومناسبة للصف الأول والثاني وسياق المدرسة الفلسطينية عند توفره. لا تدّع إنشاء ملف أو تنفيذ إجراء لم يحدث.`}async function gemini(t){const key=localStorage.getItem(KEY);if(!key)throw Error('أضف مفتاح Gemini من الإعدادات.');const model=localStorage.getItem(MODEL)||'gemini-2.5-flash';const parts=[{text:systemPrompt()+'\n\nطلب المستخدم:\n'+t}];for(const f of files){if(f.type==='image')parts.push({inline_data:{mime_type:f.mime,data:f.data}});else parts.push({text:'\n--- المصدر: '+f.name+' ---\n'+f.text.slice(0,220000)})}const r=await fetch('https://generativelanguage.googleapis.com/v1beta/models/'+encodeURIComponent(model)+':generateContent?key='+encodeURIComponent(key),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[...history.slice(-16),{role:'user',parts}],generationConfig:{temperature:.2,maxOutputTokens:8192}})});const j=await r.json();if(!r.ok)throw Error(j?.error?.message||'فشل الاتصال');return j.candidates?.[0]?.content?.parts?.map(p=>p.text||'').join('')||'لم يرجع النموذج نصًا'}$('send').onclick=send;$('prompt').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}});async function send(){const t=$('prompt').value.trim();if(!t&&!files.length)return;switchView('chat');msg('user',t||'أرفقت ملفات.',files.map(f=>f.name));$('prompt').value='';const b=msg('assistant','حكيم يعالج الطلب…');try{const out=await gemini(t||'حلل الملفات المرفقة وقدم نتيجة عملية.');b.textContent=out;lastOutput=out;history.push({role:'user',parts:[{text:t||'أرفقت ملفات.'}]},{role:'model',parts:[{text:out}]});state.projects++;saveState();if(/(أنشئ|إنشاء|ملف|word|excel|xlsx|docx|ورقة عمل|جاهز للطباعة)/i.test(t))exportUI(out)}catch(e){b.textContent='تعذر التنفيذ: '+e.message}files=[];$('files').innerHTML='';saveState()}function exportUI(text){const m=msg('assistant','تم تجهيز المحتوى. اختر الإخراج:');const box=document.createElement('div');box.className='download';[['txt','TXT'],['html','HTML'],['docx','Word'],['xlsx','Excel'],['print','PDF عبر الطباعة']].forEach(([k,l])=>{const b=document.createElement('button');b.className='btn';b.textContent='إنشاء '+l;b.onclick=()=>makeFile(k,text);box.appendChild(b)});m.appendChild(box)}async function makeFile(k,text){let blob,name;if(k==='txt'){blob=new Blob([text],{type:'text/plain;charset=utf-8'});name='hakim-result.txt'}else if(k==='html'){blob=new Blob(['<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><body style="font-family:Arial;direction:rtl;white-space:pre-wrap;padding:30px">'+escapeHtml(text)+'</body></html>'],{type:'text/html;charset=utf-8'});name='hakim-result.html'}else if(k==='xlsx'){const ws=XLSX.utils.aoa_to_sheet(text.split('\n').map(x=>[x]));const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'النتيجة');blob=new Blob([XLSX.write(wb,{bookType:'xlsx',type:'array'})],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});name='hakim-result.xlsx'}else if(k==='docx'){const d=new docx.Document({sections:[{children:text.split('\n').map(x=>new docx.Paragraph({text:x,alignment:docx.AlignmentType.RIGHT}))}]});blob=await docx.Packer.toBlob(d);name='hakim-result.docx'}else{const w=window.open('','_blank');if(!w){toast('اسمح بالنوافذ المنبثقة');return}w.document.write('<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><title>HAKIM Ω</title><style>body{font-family:Arial;direction:rtl;white-space:pre-wrap;padding:30px;line-height:1.8}@media print{body{margin:0}}</style><body>'+escapeHtml(text)+'</body></html>');w.document.close();setTimeout(()=>w.print(),300);return}const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}$('settingsBtn').onclick=()=>{$('settings').classList.add('show');$('key').value=localStorage.getItem(KEY)||'';$('model').value=localStorage.getItem(MODEL)||'gemini-2.5-flash'};$('close').onclick=()=>$('settings').classList.remove('show');$('clear').onclick=()=>{localStorage.removeItem(KEY);status();$('test').textContent='تم حذف المفتاح.'};$('save').onclick=async()=>{const k=$('key').value.trim();if(!k){$('test').textContent='أدخل المفتاح.';return}localStorage.setItem(KEY,k);localStorage.setItem(MODEL,$('model').value);$('test').textContent='جارٍ الاختبار…';try{await gemini('أجب بكلمة واحدة فقط: جاهز');$('test').textContent='الاتصال ناجح ✓';status()}catch(e){localStorage.removeItem(KEY);$('test').textContent='فشل: '+e.message;status()}};$('buildComp').onclick=()=>{state.competencies++;saveState();const g=$('grade').value,s=$('subject').value;$('compResult').style.display='block';$('compResult').innerHTML='<h3>مسودة خريطة كفاية</h3><p><b>السياق:</b> '+g+' — '+s+'</p><ol><li>الغاية التعليمية</li><li>الكفاية المستهدفة</li><li>مهارات/مؤشرات قابلة للملاحظة</li><li>نشاط تعلم</li><li>دليل تعلم</li><li>معيار إتقان</li></ol><p class="note">هذه بنية أولية. استخدم المحادثة مع حكيم وربط المصدر لبناء خريطة موثقة.</p>'};status();saveState();</script></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="مساحة العمل التعليمية حكيم Ω — منصة بيداغوجية مؤسسية للصفوف الأساسية لتحويل الأهداف إلى خطط دروس، أوراق عمل، تقويمات، وخرائط كفايات مع التدقيق البيداغوجي والتصدير الموثق.">
+  <meta property="og:title" content="HAKIM Ω — مساحة العمل التعليمية">
+  <meta property="og:description" content="مساحة العمل التعليمية حكيم Ω — منصة بيداغوجية مؤسسية للصفوف الأساسية لتحويل الأهداف إلى خطط دروس، أوراق عمل، تقويمات، وخرائط كفايات مع التدقيق البيداغوجي والتصدير الموثق.">
+  <title>HAKIM Ω — مساحة العمل التعليمية</title>
+
+  <!-- External Parsers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.8.0/mammoth.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/8.5.0/docx.umd.min.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700&display=swap');
+
+    :root {
+      --font-display: 'Cairo', system-ui, -apple-system, sans-serif;
+      --font-body: 'Tajawal', system-ui, -apple-system, sans-serif;
+
+      --bg-base: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #ffffff;
+      --bg-sidebar: #09131f;
+      --bg-sidebar-hover: #122138;
+      --bg-sidebar-active: #0f766e;
+
+      --primary: #0f766e;
+      --primary-hover: #115e59;
+      --primary-soft: #f0fdfa;
+      --primary-border: #ccfbf1;
+      --primary-text: #0f766e;
+
+      --sky: #0284c7;
+      --sky-soft: #f0f9ff;
+      --sky-border: #bae6fd;
+
+      --emerald: #059669;
+      --emerald-soft: #ecfdf5;
+      --emerald-border: #a7f3d0;
+
+      --amber: #d97706;
+      --amber-soft: #fffbeb;
+      --amber-border: #fde68a;
+
+      --rose: #e11d48;
+      --rose-soft: #fff1f2;
+      --rose-border: #fecdd3;
+
+      --text-main: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --text-white: #ffffff;
+
+      --border-subtle: #e2e8f0;
+      --border-medium: #cbd5e1;
+
+      --radius-xs: 6px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-pill: 9999px;
+
+      --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+      --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06);
+      --shadow-lg: 0 10px 25px -3px rgba(15, 23, 42, 0.08);
+
+      --sidebar-width: 270px;
+      --topbar-height: 64px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      font-family: var(--font-body);
+      background: var(--bg-base);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6, .display-font {
+      font-family: var(--font-display);
+      line-height: 1.35;
+    }
+
+    /* Layout Structure */
+    .app-root {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+      width: var(--sidebar-width);
+      background: var(--bg-sidebar);
+      color: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid #1e293b;
+      flex-shrink: 0;
+      z-index: 30;
+      transition: transform 0.2s ease;
+    }
+
+    .sidebar-header {
+      padding: 18px 20px;
+      border-bottom: 1px solid #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-avatar {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #0f766e, #14b8a6);
+      color: #ffffff;
+      border-radius: var(--radius-sm);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(15, 118, 110, 0.3);
+    }
+
+    .brand-meta h2 {
+      font-size: 17px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0;
+      letter-spacing: -0.2px;
+    }
+    .brand-meta p {
+      font-size: 11.5px;
+      color: #94a3b8;
+      margin: 0;
+    }
+
+    .nav-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nav-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #64748b;
+      padding: 10px 12px 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 12px;
+      border-radius: var(--radius-sm);
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      cursor: pointer;
+      border: 0;
+      background: transparent;
+      width: 100%;
+      text-align: right;
+      transition: all 0.15s ease;
+    }
+
+    .nav-item:hover {
+      background: var(--bg-sidebar-hover);
+      color: #ffffff;
+    }
+
+    .nav-item.active {
+      background: var(--bg-sidebar-active);
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .nav-item-icon {
+      font-size: 16px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .sidebar-footer {
+      padding: 14px 16px;
+      border-top: 1px solid #1e293b;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .system-health-pill {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 10px;
+      background: #111e2f;
+      border-radius: var(--radius-sm);
+      border: 1px solid #1e293b;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    /* Main Area */
+    .main-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--bg-base);
+    }
+
+    /* Top Bar */
+    .top-bar {
+      height: var(--topbar-height);
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      flex-shrink: 0;
+    }
+
+    .top-left-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--text-main);
+    }
+
+    .page-heading {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .top-context-filters {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .context-select {
+      font-size: 13px;
+      padding: 6px 10px;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xs);
+      background: #ffffff;
+      color: var(--text-main);
+      font-family: inherit;
+    }
+
+    .top-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--emerald-soft);
+      color: var(--emerald);
+      border: 1px solid var(--emerald-border);
+    }
+
+    /* Content Area */
+    .content-viewport {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+    }
+
+    .container-limit {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .view-panel {
+      display: none;
+    }
+    .view-panel.active {
+      display: block;
+      animation: fadeIn 0.15s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(3px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Card System */
+    .card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-xs);
+      margin-bottom: 20px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .card-header h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 8px 16px;
+      font-size: 13.5px;
+      font-weight: 600;
+      font-family: inherit;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-medium);
+      background: #ffffff;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background: #f1f5f9;
+      border-color: #94a3b8;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
+
+    .btn-emerald {
+      background: var(--emerald);
+      border-color: var(--emerald);
+      color: #ffffff;
+    }
+    .btn-emerald:hover { background: #047857; }
+
+    .btn-sky {
+      background: var(--sky);
+      border-color: var(--sky);
+      color: #ffffff;
+    }
+    .btn-sky:hover { background: #0369a1; }
+
+    .btn-sm {
+      padding: 5px 10px;
+      font-size: 12px;
+      gap: 5px;
+    }
+
+    /* Bento & Grids */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .metric-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .metric-title { font-size: 12.5px; color: var(--text-muted); font-weight: 500; }
+    .metric-value { font-size: 24px; font-weight: 800; font-family: var(--font-display); color: var(--text-main); }
+    .metric-sub { font-size: 11.5px; color: var(--emerald); display: flex; align-items: center; gap: 4px; }
+
+    /* Action Tiles */
+    .action-tile {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: right;
+    }
+    .action-tile:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .action-tile-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+    .action-tile h4 { font-size: 15px; font-weight: 700; color: var(--text-main); }
+    .action-tile p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* Chat & Studio Composer */
+    .chat-container {
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 120px);
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .chat-history {
+      flex: 1;
+      overflow-y: auto;
+      padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .chat-bubble-row {
+      display: flex;
+      width: 100%;
+    }
+    .chat-bubble-row.user { justify-content: flex-start; }
+    .chat-bubble-row.assistant { justify-content: flex-end; }
+
+    .chat-bubble {
+      max-width: 86%;
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      font-size: 14.5px;
+      line-height: 1.8;
+      box-shadow: var(--shadow-xs);
+      overflow-wrap: anywhere;
+    }
+
+    .chat-bubble-row.user .chat-bubble {
+      background: var(--sky-soft);
+      border: 1px solid var(--sky-border);
+      color: #0369a1;
+    }
+
+    .chat-bubble-row.assistant .chat-bubble {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .bubble-actions {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-subtle);
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .chat-composer-box {
+      background: #ffffff;
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      box-shadow: var(--shadow-md);
+      position: sticky;
+      bottom: 0;
+    }
+
+    .chat-input-area {
+      width: 100%;
+      min-height: 60px;
+      max-height: 180px;
+      border: none;
+      outline: none;
+      resize: vertical;
+      font-size: 14.5px;
+      font-family: inherit;
+      color: var(--text-main);
+    }
+
+    .composer-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 8px;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 8px;
+    }
+
+    /* Math Isolated Expressions */
+    .math-expr {
+      direction: ltr !important;
+      unicode-bidi: embed !important;
+      font-family: var(--font-display);
+      font-weight: 700;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 2px 6px;
+      border-radius: var(--radius-xs);
+      display: inline-block;
+      margin: 0 3px;
+    }
+
+    /* Tables */
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    .custom-table th, .custom-table td {
+      border: 1px solid var(--border-subtle);
+      padding: 10px 14px;
+      text-align: right;
+    }
+    .custom-table th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .badge-primary { background: var(--primary-soft); color: var(--primary-text); border: 1px solid var(--primary-border); }
+    .badge-emerald { background: var(--emerald-soft); color: var(--emerald); border: 1px solid var(--emerald-border); }
+    .badge-amber { background: var(--amber-soft); color: var(--amber); border: 1px solid var(--amber-border); }
+    .badge-rose { background: var(--rose-soft); color: var(--rose); border: 1px solid var(--rose-border); }
+
+    /* Modals & Toasts */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-backdrop.open { display: flex; }
+
+    .modal-sheet {
+      background: #ffffff;
+      width: min(800px, 96vw);
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      z-index: 150;
+      display: none;
+      box-shadow: var(--shadow-lg);
+    }
+    .toast.show { display: block; animation: fadeIn 0.2s ease; }
+
+    /* Forms */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .form-input, .form-textarea, .form-select {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--text-main);
+      background: #ffffff;
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 900px) {
+      .sidebar {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: translateX(100%);
+      }
+      .sidebar.open {
+        transform: translateX(0);
+      }
+      .mobile-menu-btn { display: block; }
+      .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .topbar-height { height: 56px; }
+      .content-viewport { padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="app-root">
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" id="appSidebar">
+    <div class="sidebar-header">
+      <div class="brand-avatar">Ω</div>
+      <div class="brand-meta">
+        <h2>HAKIM Ω</h2>
+        <p>المؤسسة البيداغوجية الذكية</p>
+      </div>
+    </div>
+
+    <div class="nav-scroll">
+      <div class="nav-group-title">لوحة التحكم</div>
+      <button class="nav-item active" data-view="dashboard">
+        <span class="nav-item-icon">📊</span>
+        <span>الرئيسية والمؤشرات</span>
+      </button>
+      <button class="nav-item" data-view="chat">
+        <span class="nav-item-icon">💬</span>
+        <span>مساحة الحوار الذكية</span>
+      </button>
+
+      <div class="nav-group-title">استوديوهات الإنتاج</div>
+      <button class="nav-item" data-view="competencies">
+        <span class="nav-item-icon">🎯</span>
+        <span>استوديو الكفايات</span>
+      </button>
+      <button class="nav-item" data-view="lessons">
+        <span class="nav-item-icon">📝</span>
+        <span>استوديو الدروس (CPA)</span>
+      </button>
+      <button class="nav-item" data-view="worksheets">
+        <span class="nav-item-icon">📄</span>
+        <span>استوديو أوراق العمل</span>
+      </button>
+      <button class="nav-item" data-view="assessments">
+        <span class="nav-item-icon">📋</span>
+        <span>استوديو التقويم والسلالم</span>
+      </button>
+
+      <div class="nav-group-title">المصادر والتحقق</div>
+      <button class="nav-item" data-view="files">
+        <span class="nav-item-icon">📁</span>
+        <span>المصادر والملفات</span>
+      </button>
+      <button class="nav-item" data-view="auditor">
+        <span class="nav-item-icon">🔍</span>
+        <span>المدقق البيداغوجي (Auditor)</span>
+      </button>
+      <button class="nav-item" data-view="projects">
+        <span class="nav-item-icon">🗄️</span>
+        <span>المشاريع والذاكرة</span>
+      </button>
+      <button class="nav-item" data-view="export">
+        <span class="nav-item-icon">📤</span>
+        <span>مركز التصدير والطباعة</span>
+      </button>
+      <button class="nav-item" data-view="settings">
+        <span class="nav-item-icon">⚙️</span>
+        <span>الإعدادات والاتصال</span>
+      </button>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="system-health-pill">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div class="pulse-dot" id="systemPulse"></div>
+          <span id="gatewayStatusText">الخادم متصل</span>
+        </div>
+        <span class="badge badge-emerald" id="activeModelBadge">3.7 Flash</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main View Area -->
+  <div class="main-wrapper">
+    <!-- Top Header -->
+    <header class="top-bar">
+      <div class="top-left-actions">
+        <button class="mobile-menu-btn" id="btnToggleMobileMenu">☰</button>
+        <h1 class="page-heading" id="topPageTitle">الرئيسية والمؤشرات</h1>
+      </div>
+
+      <div class="top-context-filters">
+        <!-- Operating Mode Selector -->
+        <select class="context-select" id="globalModeSelect" style="font-weight: 700; color: var(--primary); background: #f0fdfa; border-color: #99f6e4;" title="وضع التشغيل واستهلاك الذكاء الاصطناعي">
+          <option value="AUTO">⚡ ذكي وتلقائي (Smart Auto)</option>
+          <option value="ECONOMIC">🌱 اقتصادي وموفر (Economic)</option>
+          <option value="QUALITY">💎 أقصى جودة (High Quality)</option>
+          <option value="OFFLINE">🛡️ محلي حتمي 100% (Offline Local)</option>
+        </select>
+        <select class="context-select" id="globalGradeSelect">
+          <option value="الصف الأول">الصف الأول</option>
+          <option value="الصف الثاني">الصف الثاني</option>
+          <option value="الصف الثالث">الصف الثالث</option>
+          <option value="الصف الرابع">الصف الرابع</option>
+        </select>
+        <select class="context-select" id="globalSubjectSelect">
+          <option value="الرياضيات">الرياضيات</option>
+          <option value="اللغة العربية">اللغة العربية</option>
+          <option value="العلوم والحياة">العلوم والحياة</option>
+        </select>
+        <button class="btn btn-primary btn-sm" id="btnQuickNewLesson">
+          <span>+ إنشاء درس سريع</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Content Viewport -->
+    <main class="content-viewport">
+      <div class="container-limit">
+
+        <!-- 01. DASHBOARD VIEW -->
+        <section id="view-dashboard" class="view-panel active">
+          <!-- Metrics -->
+          <div class="grid-4" style="margin-bottom: 20px;">
+            <div class="metric-card">
+              <span class="metric-title">المشاريع التعليمية</span>
+              <span class="metric-value" id="dashProjectsCount">0</span>
+              <span class="metric-sub">جاهزة للتطبيق والطباعة</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-title">الكفايات المعتمدة</span>
+              <span class="metric-value" id="dashCompCount">8</span>
+              <span class="metric-sub">تغطي الصفوف 1 - 4</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-title">الملفات والمصادر</span>
+              <span class="metric-value" id="dashFilesCount">0</span>
+              <span class="metric-sub">محللة ومستخرجة</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-title">نسبة التحقق والضبط</span>
+              <span class="metric-value" style="color: var(--emerald);">100%</span>
+              <span class="metric-sub">مطابقة معايير CPA</span>
+            </div>
+          </div>
+
+          <!-- Quick Action Launchers -->
+          <div class="card">
+            <div class="card-header">
+              <h3>مسارات الإنتاج البيداغوجي المباشرة</h3>
+            </div>
+            <div class="grid-3">
+              <div class="action-tile" onclick="switchView('lessons')">
+                <div class="action-tile-icon" style="background: var(--primary-soft); color: var(--primary);">📝</div>
+                <h4>خطة درس متدرجة</h4>
+                <p>صياغة كاملة لخطوات الدرس (محسوس ← مصور ← مجرد) مع أسئلة التمايز.</p>
+              </div>
+              <div class="action-tile" onclick="switchView('worksheets')">
+                <div class="action-tile-icon" style="background: var(--sky-soft); color: var(--sky);">📄</div>
+                <h4>ورقة عمل صفية A4</h4>
+                <p>تمارين تفاعلية متدرجة الصعوبة مع مفتاح الإجابة وسلم التصحيح.</p>
+              </div>
+              <div class="action-tile" onclick="switchView('assessments')">
+                <div class="action-tile-icon" style="background: var(--emerald-soft); color: var(--emerald);">📋</div>
+                <h4>تقويم تشخيصي وتكويني</h4>
+                <p>مصفوفة أسئلة وسلالم تقدير لفظية (Rubric) لتحديد معيار الإتقان.</p>
+              </div>
+              <div class="action-tile" onclick="switchView('competencies')">
+                <div class="action-tile-icon" style="background: var(--amber-soft); color: var(--amber);">🎯</div>
+                <h4>مصفوفة الكفايات والمؤشرات</h4>
+                <p>استعراض نواتج التعلم وتوليد المهام التعليمية بنقرة واحدة.</p>
+              </div>
+              <div class="action-tile" onclick="switchView('auditor')">
+                <div class="action-tile-icon" style="background: var(--rose-soft); color: var(--rose);">🔍</div>
+                <h4>التدقيق البيداغوجي الشامل</h4>
+                <p>فحص المحتوى عبر 7 أبعاد تربوية واكتشاف أي خلل رياضي أو لغوي.</p>
+              </div>
+              <div class="action-tile" onclick="switchView('files')">
+                <div class="action-tile-icon" style="background: #f1f5f9; color: var(--text-secondary);">📁</div>
+                <h4>تحليل المصادر والكتب</h4>
+                <p>رفع ملفات المنهاج واستخراج الأهداف والمفاهيم الرئيسة.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Projects -->
+          <div class="card">
+            <div class="card-header">
+              <h3>أحدث المشاريع التعليمية</h3>
+              <button class="btn btn-sm" onclick="switchView('projects')">عرض الكل</button>
+            </div>
+            <div id="dashRecentProjectsList">
+              <p style="color: var(--text-muted); font-size: 13.5px;">جاري تحميل المشاريع...</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02. CHAT & WORKSPACE VIEW -->
+        <section id="view-chat" class="view-panel">
+          <div class="chat-container">
+            <div class="chat-history" id="chatHistoryBox">
+              <div class="card" style="text-align: center; padding: 24px;">
+                <h3 style="margin-bottom: 8px;">مرحبًا بك في مساحة الحوار مع HAKIM Ω</h3>
+                <p style="color: var(--text-secondary); font-size: 13.5px; max-width: 600px; margin: 0 auto 16px;">
+                  يمكنك كتابة أي طلب بيداغوجي، أو استشارة تربوية، أو طلب تحليل نصوص تعليمية وفق مسار التدرج النمائي.
+                </p>
+                <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
+                  <button class="btn btn-sm" onclick="fillChatPrompt('صمم نشاطاً محسوساً لدرس الجمع ضمن 10 للصف الأول باستخدام الأزرار والمكعبات')">💡 نشاط محسوس للجمع</button>
+                  <button class="btn btn-sm" onclick="fillChatPrompt('أنشئ ورقة عمل علاجية للتمييز بين اللام الشمسية واللام القمرية للصف الثاني')">💡 ورقة عمل لغوية</button>
+                  <button class="btn btn-sm" onclick="fillChatPrompt('دقق هذا التمرين الرياضي وافحص ترتيب العمليات الحسابية ومطابقة الرسوم: 5 + 3 = 8')">💡 تدقيق حسابي</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Composer Sticky -->
+            <div class="chat-composer-box">
+              <textarea class="chat-input-area" id="chatInputText" placeholder="اكتب طلبك التربوي هنا أو استفسارك البيداغوجي..."></textarea>
+              <div class="composer-toolbar">
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <button class="btn btn-sm" id="btnAttachFileChat">📎 إرفاق ملف</button>
+                  <input type="file" id="chatFileInput" style="display: none;" accept=".txt,.pdf,.docx,.xlsx,.csv,.json">
+                  <span id="chatFileAttachLabel" style="font-size: 12px; color: var(--text-muted);"></span>
+                </div>
+                <button class="btn btn-primary" id="btnSendChat">
+                  <span>إرسال الطلب</span>
+                  <span>↵</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 03. COMPETENCY STUDIO -->
+        <section id="view-competencies" class="view-panel">
+          <div class="card">
+            <div class="card-header">
+              <h3>مصفوفة الكفايات ونواتج التعلم</h3>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" class="form-input" id="compSearchInput" placeholder="بحث في الكفايات والمهارات..." style="max-width: 240px;">
+              </div>
+            </div>
+            <div id="competenciesContainer" style="display: flex; flex-direction: column; gap: 12px;">
+              <p style="color: var(--text-muted);">جاري تحميل الكفايات المعيارية...</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 04. LESSON STUDIO -->
+        <section id="view-lessons" class="view-panel">
+          <div class="card">
+            <div class="card-header">
+              <h3>استوديو بناء الدروس المتدرجة (CPA Framework)</h3>
+              <button class="btn btn-primary" id="btnGenerateLessonAI">✨ توليد خطة الدرس بواسطة HAKIM</button>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label>عنوان الدرس:</label>
+                <input type="text" class="form-input" id="lessonTitleInput" value="مفهوم الجمع بالضم والتمثيل المصور">
+              </div>
+              <div class="form-group">
+                <label>الكفاية المرتبطة:</label>
+                <input type="text" class="form-input" id="lessonCompInput" value="M1-02: مفهوم الجمع ضمن 10 وتوظيف المحسوسات">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>محتوى خطة الدرس (وفق التدرج: محسوس ← مصور ← مجرد):</label>
+              <textarea class="form-textarea" id="lessonContentText" style="min-height: 280px; font-family: monospace; font-size: 13.5px;"></textarea>
+            </div>
+
+            <div style="display: flex; gap: 10px; justify-content: flex-end;">
+              <button class="btn btn-emerald" id="btnAuditCurrentLesson">🔍 تدقيق بيداغوجي فوري</button>
+              <button class="btn btn-sky" id="btnSaveLessonProject">💾 حفظ في المشاريع</button>
+              <button class="btn" id="btnExportLessonDoc">📤 تصدير وطباعة A4</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 05. WORKSHEET STUDIO -->
+        <section id="view-worksheets" class="view-panel">
+          <div class="card">
+            <div class="card-header">
+              <h3>استوديو تصميم أوراق العمل الصفية</h3>
+              <button class="btn btn-primary" id="btnGenerateWorksheetAI">✨ إنشاء ورقة عمل تفاعلية</button>
+            </div>
+
+            <div class="grid-3">
+              <div class="form-group">
+                <label>عنوان ورقة العمل:</label>
+                <input type="text" class="form-input" id="wsTitleInput" value="ورقة عمل: مقارنة الأعداد والترتيب التصاعدي">
+              </div>
+              <div class="form-group">
+                <label>مستوى الصعوبة:</label>
+                <select class="form-select" id="wsDifficulty">
+                  <option value="متدرج (أساسي - متوسط - تحدي)">متدرج (أساسي - متوسط - تحدي)</option>
+                  <option value="علاجي داعم">علاجي داعم</option>
+                  <option value="إثرائي متقدم">إثرائي متقدم</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>نوع الأرقام:</label>
+                <select class="form-select" id="wsNumeralType">
+                  <option value="arabic_standard">أرقام عربية قياسية (1, 2, 3)</option>
+                  <option value="eastern_arabic">أرقام مشرقية (١، ٢، ٣)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>معاينة ورقة العمل الجاهزة للطباعة:</label>
+              <textarea class="form-textarea" id="wsContentText" style="min-height: 280px; font-size: 13.5px;"></textarea>
+            </div>
+
+            <div style="display: flex; gap: 10px; justify-content: flex-end;">
+              <button class="btn btn-sky" id="btnSaveWorksheetProject">💾 حفظ في المشاريع</button>
+              <button class="btn btn-primary" id="btnPrintWorksheetA4">🖨️ طباعة A4 مباشرة</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 06. ASSESSMENT STUDIO -->
+        <section id="view-assessments" class="view-panel">
+          <div class="card">
+            <div class="card-header">
+              <h3>استوديو التقويم والسلالم اللفظية (Rubrics)</h3>
+              <button class="btn btn-primary" id="btnGenerateAssessmentAI">✨ توليد أداة تقويم وسلّم تقدير</button>
+            </div>
+
+            <div class="form-group">
+              <label>نوع التقويم والموضوع المستهدف:</label>
+              <input type="text" class="form-input" id="assessmentTopicInput" value="تقويم تكويني: التحليل الصوتي ورسم الحروف الهجائية للصف الأول">
+            </div>
+
+            <div class="form-group">
+              <label>نص الاختبار وسلّم التقدير ومفتاح الإجابة:</label>
+              <textarea class="form-textarea" id="assessmentContentText" style="min-height: 280px; font-size: 13.5px;"></textarea>
+            </div>
+
+            <div style="display: flex; gap: 10px; justify-content: flex-end;">
+              <button class="btn btn-sky" id="btnSaveAssessmentProject">💾 حفظ كأداة تقويم</button>
+              <button class="btn" id="btnExportAssessment">📤 تصدير سلم التقدير</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 07. FILE & SOURCE STUDIO -->
+        <section id="view-files" class="view-panel">
+          <div class="card">
+            <div class="card-header">
+              <h3>إدارة وتحليل مصادر المنهاج والملفات</h3>
+            </div>
+
+            <div style="border: 2px dashed var(--border-medium); padding: 30px; text-align: center; border-radius: var(--radius-md); background: #fafafa; cursor: pointer;" id="fileDropzone">
+              <div style="font-size: 32px; margin-bottom: 8px;">📂</div>
+              <h4 style="font-size: 15px; margin-bottom: 4px;">اسحب وأفلت ملفات المنهاج هنا أو انقر للاختيار</h4>
+              <p style="font-size: 12.5px; color: var(--text-muted);">يدعم PDF، Word (docx)، Excel (xlsx)، TXT، CSV، JSON</p>
+              <input type="file" id="mainFileInput" style="display: none;" multiple accept=".pdf,.docx,.xlsx,.txt,.csv,.json">
+            </div>
+
+            <div style="margin-top: 20px;">
+              <h4 style="font-size: 14px; margin-bottom: 10px;">الملفات المحملة والمستخرجة:</h4>
+              <div id="uploadedFilesTable">
+                <p style="color: var(--text-muted); font-size: 13px;">لم يتم رفع أي ملفات حتى الآن.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 08. AUDITOR STUDIO -->
+        <section id="view-auditor" class="view-panel">
+          <div class="card">
+            <div class="card-header">
+              <h3>المدقق البيداغوجي الذكي (HAKIM Ω Auditor)</h3>
+              <button class="btn btn-emerald" id="btnRunFullAudit">🔍 بدء الفحص عبر الأبعاد السبعة</button>
+            </div>
+
+            <div class="form-group">
+              <label>النص أو المخرج التعليمي المراد فحصه وتدقيقه:</label>
+              <textarea class="form-textarea" id="auditInputText" placeholder="الصق هنا خطة الدرس، ورقة العمل، أو المسألة الحسابية للتحقق من سلامتها..." style="min-height: 160px;"></textarea>
+            </div>
+
+            <div id="auditResultBox" style="display: none; margin-top: 20px; border-top: 1px solid var(--border-subtle); padding-top: 16px;">
+              <h4 style="font-size: 15px; margin-bottom: 12px; color: var(--primary);">تقرير التدقيق والضبط البيداغوجي:</h4>
+              <div id="auditReportOutput" style="background: #f8fafc; border: 1px solid var(--border-subtle); padding: 18px; border-radius: var(--radius-sm); white-space: pre-wrap; font-size: 14px; line-height: 1.8;"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 09. PROJECTS & MEMORY BANK -->
+        <section id="view-projects" class="view-panel">
+          <div class="card">
+            <div class="card-header">
+              <h3>سجل المشاريع وبنك الذاكرة التعليمية</h3>
+              <div style="display: flex; gap: 8px;">
+                <button class="btn btn-sm" id="btnExportAllProjectsJSON">📥 تنزيل نسخة احتياطية (JSON)</button>
+                <button class="btn btn-sm" id="btnImportProjectsJSON">📤 استيراد مشاريع</button>
+                <input type="file" id="importJsonInput" style="display: none;" accept=".json">
+              </div>
+            </div>
+            <div id="projectsListContainer">
+              <p style="color: var(--text-muted); font-size: 13.5px;">جاري استرجاع المشاريع...</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. EXPORT STUDIO -->
+        <section id="view-export" class="view-panel">
+          <div class="card">
+            <div class="card-header">
+              <h3>مركز التصدير والطباعة الاحترافية</h3>
+            </div>
+
+            <div class="form-group">
+              <label>المحتوى المراد تصديره:</label>
+              <textarea class="form-textarea" id="exportContentText" style="min-height: 200px;" placeholder="اكتب أو الصق المحتوى هنا..."></textarea>
+            </div>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <button class="btn btn-primary" onclick="exportDocument('html')">📄 تصدير HTML نظامي A4</button>
+              <button class="btn" onclick="exportDocument('docx')">📘 تصدير Word (DOCX)</button>
+              <button class="btn" onclick="exportDocument('xlsx')">📊 تصدير Excel (XLSX)</button>
+              <button class="btn" onclick="exportDocument('markdown')">📝 تصدير Markdown</button>
+              <button class="btn btn-emerald" onclick="exportDocument('print')">🖨️ معاينة وطباعة فورية</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 11. SETTINGS VIEW -->
+        <section id="view-settings" class="view-panel">
+          <div class="card">
+            <div class="card-header">
+              <h3>بنية الحوكمة وتعدد المزودين (Multi-Provider Intelligence Fabric)</h3>
+              <div style="display: flex; gap: 8px;">
+                <button class="btn btn-primary btn-sm" id="btnTestProvidersHealth">⚡ فحص حيوية المزودين</button>
+                <button class="btn btn-sm" id="btnRefreshServerStatus">🔄 تحديث الحالة</button>
+              </div>
+            </div>
+
+            <div class="grid-2" style="margin-bottom: 16px;">
+              <div class="form-group">
+                <label>وضع التشغيل والحوكمة الحالية:</label>
+                <select class="form-select" id="settingOperatingModeSelect">
+                  <option value="AUTO">⚡ ذكي وتلقائي (Smart Auto Router)</option>
+                  <option value="ECONOMIC">🌱 اقتصادي وموفر (Economic - Groq/Cloudflare First)</option>
+                  <option value="QUALITY">💎 أقصى جودة بيداغوجية (High Quality - Gemini Pro/Flash)</option>
+                  <option value="OFFLINE">🛡️ محلي حتمي 100% (Offline Deterministic - 0 Tokens)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>أمان وبيئة المفاتيح (API Secrets Isolation):</label>
+                <input type="text" class="form-input" id="settingSecretStatus" value="المفاتيح محمية ومخفية تماماً Server-Side ✓" readonly style="background: #f8fafc; color: var(--emerald); font-weight: bold;">
+              </div>
+            </div>
+
+            <!-- Provider Health Matrix -->
+            <div style="margin-top: 14px; padding: 16px; background: #ffffff; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <h4 style="font-size: 14px; margin-bottom: 10px; color: var(--primary);">مصفوفة المزودين المتاحين ونقاط النهاية:</h4>
+              <div id="providersMatrixContainer" class="grid-2" style="gap: 10px;">
+                <div style="padding: 10px 14px; border: 1px solid var(--border-subtle); border-radius: 6px; background: #fafafa;">
+                  <div style="font-weight: 700; font-size: 13.5px; display: flex; justify-content: space-between;">
+                    <span>Google Gemini</span>
+                    <span class="badge badge-emerald" id="badge-gemini">جاهز</span>
+                  </div>
+                  <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">النماذج: 3.7 Flash / 3.1 Flash Lite / 3.1 Pro</div>
+                </div>
+                <div style="padding: 10px 14px; border: 1px solid var(--border-subtle); border-radius: 6px; background: #fafafa;">
+                  <div style="font-weight: 700; font-size: 13.5px; display: flex; justify-content: space-between;">
+                    <span>Groq Cloud</span>
+                    <span class="badge badge-sky" id="badge-groq">مدعوم</span>
+                  </div>
+                  <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">النماذج: Llama-3.3-70b / Mixtral-8x7b</div>
+                </div>
+                <div style="padding: 10px 14px; border: 1px solid var(--border-subtle); border-radius: 6px; background: #fafafa;">
+                  <div style="font-weight: 700; font-size: 13.5px; display: flex; justify-content: space-between;">
+                    <span>Cloudflare Workers AI</span>
+                    <span class="badge badge-amber" id="badge-cloudflare">مدعوم</span>
+                  </div>
+                  <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">النماذج: Llama-3.1-8b-instruct</div>
+                </div>
+                <div style="padding: 10px 14px; border: 1px solid var(--border-subtle); border-radius: 6px; background: #fafafa;">
+                  <div style="font-weight: 700; font-size: 13.5px; display: flex; justify-content: space-between;">
+                    <span>المحرك الحتمي المحلي (Offline)</span>
+                    <span class="badge badge-emerald" id="badge-local">نشط دائمًا (0 توكن)</span>
+                  </div>
+                  <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">توليد وتدقيق بيداغوجي حتمي بدون إنترنت</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Circuit Breakers Display -->
+            <div style="margin-top: 14px; padding: 14px; background: #f8fafc; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <h4 style="font-size: 13.5px; margin-bottom: 6px;">حالة قواطع الدائرة (Circuit Breakers):</h4>
+              <div id="circuitBreakersStatusDisplay" style="font-size: 13px; color: var(--text-secondary);">
+                جاري فحص حالة النماذج...
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div class="toast" id="appToast"></div>
+
+<script>
+  // Application State
+  const state = {
+    currentView: 'dashboard',
+    projects: [],
+    competencies: [],
+    uploadedFiles: [],
+    serverConfig: null
+  };
+
+  const $ = id => document.getElementById(id);
+
+  function showToast(msg) {
+    const t = $('appToast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3000);
+  }
+
+  // Navigation Logic
+  function switchView(viewName) {
+    state.currentView = viewName;
+    document.querySelectorAll('.view-panel').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+
+    const targetView = $(`view-${viewName}`);
+    if (targetView) targetView.classList.add('active');
+
+    const navBtn = document.querySelector(`.nav-item[data-view="${viewName}"]`);
+    if (navBtn) navBtn.classList.add('active');
+
+    const titles = {
+      dashboard: 'الرئيسية والمؤشرات',
+      chat: 'مساحة الحوار الذكية',
+      competencies: 'استوديو الكفايات',
+      lessons: 'استوديو الدروس (CPA)',
+      worksheets: 'استوديو أوراق العمل',
+      assessments: 'استوديو التقويم والسلالم',
+      files: 'إدارة المصادر والملفات',
+      auditor: 'المدقق البيداغوجي',
+      projects: 'سجل المشاريع والذاكرة',
+      export: 'مركز التصدير والطباعة',
+      settings: 'الإعدادات والاتصال'
+    };
+    $('topPageTitle').textContent = titles[viewName] || 'HAKIM Ω';
+
+    // Auto-close mobile menu
+    $('appSidebar').classList.remove('open');
+  }
+
+  document.querySelectorAll('.nav-item').forEach(btn => {
+    btn.onclick = () => switchView(btn.getAttribute('data-view'));
+  });
+
+  $('btnToggleMobileMenu').onclick = () => {
+    $('appSidebar').classList.toggle('open');
+  };
+
+  // Quick Lesson trigger
+  $('btnQuickNewLesson').onclick = () => {
+    switchView('lessons');
+  };
+
+  // Chat Prompt Fill Helper
+  window.fillChatPrompt = function(promptText) {
+    switchView('chat');
+    $('chatInputText').value = promptText;
+    $('chatInputText').focus();
+  };
+
+  // ----------------------------------------------------
+  // API INTEGRATIONS & MULTI-PROVIDER CONTROLS
+  // ----------------------------------------------------
+  async function changeOperatingMode(newMode) {
+    try {
+      const res = await fetch('/api/config/mode', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ mode: newMode })
+      });
+      const data = await res.json();
+      if (data.success) {
+        if ($('globalModeSelect')) $('globalModeSelect').value = newMode;
+        if ($('settingOperatingModeSelect')) $('settingOperatingModeSelect').value = newMode;
+        const modeLabels = {
+          AUTO: 'التوجيه التلقائي الذكي',
+          ECONOMIC: 'الوضع الاقتصادي الموفر',
+          QUALITY: 'وضع الجودة القصوى',
+          OFFLINE: 'الوضع المحلي الحتمي (0 توكن)'
+        };
+        showToast(`تم تفعيل: ${modeLabels[newMode] || newMode} ✓`);
+        fetchServerConfig();
+      }
+    } catch (e) {
+      showToast('تعذر تغيير وضع التشغيل');
+    }
+  }
+
+  if ($('globalModeSelect')) {
+    $('globalModeSelect').onchange = (e) => changeOperatingMode(e.target.value);
+  }
+  if ($('settingOperatingModeSelect')) {
+    $('settingOperatingModeSelect').onchange = (e) => changeOperatingMode(e.target.value);
+  }
+
+  async function checkProvidersHealth() {
+    showToast('جاري فحص اتصال وحيوية المزودين...');
+    try {
+      const res = await fetch('/api/providers/health', { method: 'POST' });
+      const data = await res.json();
+      if (data.success && data.results) {
+        const gem = data.results.gemini;
+        const groq = data.results.groq;
+        const cf = data.results.cloudflare;
+        const local = data.results.localDeterministic;
+
+        if ($('badge-gemini')) $('badge-gemini').className = 'badge ' + (gem?.connected ? 'badge-emerald' : 'badge-amber');
+        if ($('badge-gemini')) $('badge-gemini').textContent = gem?.connected ? `نشط (${gem.latencyMs}ms)` : (gem?.status || 'غير مهيأ');
+
+        if ($('badge-groq')) $('badge-groq').className = 'badge ' + (groq?.connected ? 'badge-emerald' : 'badge-sky');
+        if ($('badge-groq')) $('badge-groq').textContent = groq?.connected ? `نشط (${groq.latencyMs}ms)` : (groq?.status || 'مدعوم');
+
+        if ($('badge-cloudflare')) $('badge-cloudflare').className = 'badge ' + (cf?.connected ? 'badge-emerald' : 'badge-amber');
+        if ($('badge-cloudflare')) $('badge-cloudflare').textContent = cf?.connected ? `نشط (${cf.latencyMs}ms)` : (cf?.status || 'مدعوم');
+
+        showToast('اكتمل فحص حيوية المزودين ✓');
+      }
+    } catch (e) {
+      showToast('تعذر إتمام الفحص');
+    }
+  }
+
+  if ($('btnTestProvidersHealth')) $('btnTestProvidersHealth').onclick = checkProvidersHealth;
+  if ($('btnRefreshServerStatus')) $('btnRefreshServerStatus').onclick = fetchServerConfig;
+
+  async function fetchServerConfig() {
+    try {
+      const res = await fetch('/api/config');
+      const data = await res.json();
+      state.serverConfig = data;
+      $('gatewayStatusText').textContent = data.hasServerKey ? 'الخادم متصل ونشط' : 'وضع محلي / متعدد المزودين';
+      
+      if (data.operatingMode) {
+        if ($('globalModeSelect')) $('globalModeSelect').value = data.operatingMode;
+        if ($('settingOperatingModeSelect')) $('settingOperatingModeSelect').value = data.operatingMode;
+      }
+
+      if (data.circuitBreaker) {
+        let cbHtml = '<div style="display:flex; gap:10px; flex-wrap:wrap;">';
+        for (const [mod, st] of Object.entries(data.circuitBreaker)) {
+          const isHealthy = st.state === 'HEALTHY';
+          cbHtml += `<span class="badge ${isHealthy ? 'badge-emerald' : 'badge-amber'}">${mod}: ${isHealthy ? 'سليم (Healthy)' : 'فترة راحة (' + st.remainingCooldownSec + 'ث)'}</span>`;
+        }
+        cbHtml += '</div>';
+        $('circuitBreakersStatusDisplay').innerHTML = cbHtml;
+      }
+    } catch (e) {
+      $('gatewayStatusText').textContent = 'تعذر الاتصال بالخادم';
+      $('systemPulse').style.background = '#e11d48';
+    }
+  }
+
+  async function loadCompetencies() {
+    try {
+      const res = await fetch('/api/competencies');
+      const data = await res.json();
+      state.competencies = data.competencies || [];
+      $('dashCompCount').textContent = state.competencies.length;
+      renderCompetencies();
+    } catch (e) {
+      console.error('Failed to load competencies', e);
+    }
+  }
+
+  function renderCompetencies() {
+    const box = $('competenciesContainer');
+    const filter = $('compSearchInput').value.trim().toLowerCase();
+    const filtered = state.competencies.filter(c => 
+      !filter || c.skill.toLowerCase().includes(filter) || c.learning_objective.toLowerCase().includes(filter) || c.subject.includes(filter)
+    );
+
+    if (!filtered.length) {
+      box.innerHTML = '<p style="color: var(--text-muted);">لا توجد كفايات مطابقة للبحث.</p>';
+      return;
+    }
+
+    box.innerHTML = filtered.map(c => `
+      <div class="card" style="margin-bottom: 12px; padding: 16px; background: #fafafa;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span class="badge badge-primary">${escapeHtml(c.id)}</span>
+            <span class="badge badge-sky">${escapeHtml(c.subject)} - ${escapeHtml(c.grade)}</span>
+            <span style="font-weight: 700; font-size: 14.5px;">${escapeHtml(c.skill)}</span>
+          </div>
+          <span class="badge badge-emerald">${escapeHtml(c.difficulty || 'معياري')}</span>
+        </div>
+        <p style="font-size: 13.5px; color: var(--text-secondary); margin-bottom: 8px;"><b>ناتج التعلم:</b> ${escapeHtml(c.learning_objective)}</p>
+        <div style="font-size: 12.5px; color: var(--text-muted); background: #ffffff; padding: 10px; border-radius: 6px; border: 1px solid var(--border-subtle); margin-bottom: 10px;">
+          <div><b>المحسوس:</b> ${escapeHtml(c.progression?.concrete || c.concrete_activity || '-')}</div>
+          <div><b>المصور:</b> ${escapeHtml(c.progression?.pictorial || c.pictorial_representation || '-')}</div>
+          <div><b>المجرد:</b> ${escapeHtml(c.progression?.abstract || c.abstract_rule || '-')}</div>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn btn-sm btn-primary" onclick="useCompForLesson('${c.id}')">📝 إنشاء درس</button>
+          <button class="btn btn-sm" onclick="useCompForWorksheet('${c.id}')">📄 إنشاء ورقة عمل</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  $('compSearchInput').oninput = renderCompetencies;
+
+  window.useCompForLesson = function(compId) {
+    const comp = state.competencies.find(c => c.id === compId);
+    if (!comp) return;
+    switchView('lessons');
+    $('lessonTitleInput').value = `خطة درس: ${comp.skill}`;
+    $('lessonCompInput').value = `${comp.id}: ${comp.skill}`;
+    $('lessonContentText').value = `### خطة درس: ${comp.skill}
+المبحث: ${comp.subject} | الصف: ${comp.grade}
+ناتج التعلم: ${comp.learning_objective}
+
+1. مسار التدرج النمائي:
+- المحسوس: ${comp.progression?.concrete || ''}
+- المصور: ${comp.progression?.pictorial || ''}
+- المجرد: ${comp.progression?.abstract || ''}
+
+2. الأنشطة والتدريب الصفي:
+(سيتم التوليد والتفصيل بالذكاء الاصطناعي عند النقر على توليد)`;
+  };
+
+  window.useCompForWorksheet = function(compId) {
+    const comp = state.competencies.find(c => c.id === compId);
+    if (!comp) return;
+    switchView('worksheets');
+    $('wsTitleInput').value = `ورقة عمل: ${comp.skill}`;
+    $('wsContentText').value = `ورقة عمل بيداغوجية
+المبحث: ${comp.subject} | الصف: ${comp.grade}
+الهدف: ${comp.learning_objective}
+
+تمرين 1 (التمثيل المصور):
+...
+تمرين 2 (التطبيق الرياضي والرمزي):
+...`;
+  };
+
+  async function loadProjects() {
+    try {
+      const res = await fetch('/api/projects');
+      const data = await res.json();
+      state.projects = data.projects || [];
+      $('dashProjectsCount').textContent = state.projects.length;
+      renderProjects();
+      renderDashRecentProjects();
+    } catch (e) {
+      console.error('Failed to load projects', e);
+    }
+  }
+
+  function renderDashRecentProjects() {
+    const box = $('dashRecentProjectsList');
+    if (!state.projects.length) {
+      box.innerHTML = '<p style="color: var(--text-muted); font-size: 13px;">لا توجد مشاريع حتى الآن. ابدأ بإنشاء درسك الأول!</p>';
+      return;
+    }
+    box.innerHTML = state.projects.slice(0, 3).map(p => `
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border-subtle);">
+        <div>
+          <div style="font-weight: 700; font-size: 14px;">${escapeHtml(p.title)}</div>
+          <div style="font-size: 12px; color: var(--text-muted);">${escapeHtml(p.subject || 'عام')} | ${escapeHtml(p.grade || 'الصف الأول')}</div>
+        </div>
+        <div style="display: flex; gap: 6px;">
+          <button class="btn btn-sm" onclick="openProjectToExport('${p.id}')">📥 تصدير</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function renderProjects() {
+    const box = $('projectsListContainer');
+    if (!state.projects.length) {
+      box.innerHTML = '<p style="color: var(--text-muted);">لا توجد مشاريع محفوظة في الذاكرة.</p>';
+      return;
+    }
+    box.innerHTML = state.projects.map(p => `
+      <div class="card" style="margin-bottom: 12px; padding: 16px; background: #fafafa;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <div style="font-weight: 700; font-size: 15px;">📁 ${escapeHtml(p.title)}</div>
+          <span class="badge badge-emerald">${escapeHtml(p.status || 'VERIFIED')}</span>
+        </div>
+        <p style="font-size: 13.5px; color: var(--text-secondary); max-height: 70px; overflow: hidden; white-space: pre-wrap; margin-bottom: 12px;">${escapeHtml(p.content.slice(0, 240))}...</p>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn btn-sm btn-primary" onclick="openProjectToExport('${p.id}')">📥 تصدير وطباعة</button>
+          <button class="btn btn-sm" onclick="deleteProject('${p.id}')" style="color: var(--rose);">🗑️ حذف</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  window.openProjectToExport = function(pId) {
+    const p = state.projects.find(x => x.id === pId);
+    if (!p) return;
+    switchView('export');
+    $('exportContentText').value = p.content;
+  };
+
+  window.deleteProject = async function(pId) {
+    if (!confirm('هل تريد بالتأكيد حذف هذا المشروع؟')) return;
+    try {
+      await fetch(`/api/projects/${pId}`, { method: 'DELETE' });
+      showToast('تم حذف المشروع بنجاح');
+      loadProjects();
+    } catch (e) {
+      showToast('فشل حذف المشروع');
+    }
+  };
+
+  // ----------------------------------------------------
+  // AI GENERATION HANDLERS
+  // ----------------------------------------------------
+  $('btnGenerateLessonAI').onclick = async () => {
+    const title = $('lessonTitleInput').value.trim();
+    const comp = $('lessonCompInput').value.trim();
+    const grade = $('globalGradeSelect').value;
+    const subject = $('globalSubjectSelect').value;
+
+    $('lessonContentText').value = '⏳ جاري الصياغة البيداغوجية للدرس وتطبيق التدرج (محسوس ← مصور ← مجرد)...';
+
+    try {
+      const res = await fetch('/api/ai', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          task: 'lesson',
+          prompt: `صمم خطة درس تعليمية كاملة لـ (${grade} - ${subject}):\nعنوان الدرس: ${title}\nالكفاية: ${comp}\nاحرص على دقة الأعداد والترتيب الرياضي ومسار CPA.`
+        })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error.message);
+
+      $('lessonContentText').value = data.text || 'تم توليد خطة الدرس بنجاح.';
+      showToast('تم إنشاء خطة الدرس بنجاح ✓');
+    } catch (err) {
+      $('lessonContentText').value = '⚠️ خطأ: ' + err.message;
+      showToast('تعذر توليد الدرس: ' + err.message);
+    }
+  };
+
+  $('btnSaveLessonProject').onclick = async () => {
+    const content = $('lessonContentText').value.trim();
+    const title = $('lessonTitleInput').value.trim();
+    if (!content) return showToast('المحتوى فارغ');
+
+    try {
+      await fetch('/api/projects', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: title || 'خطة درس تعليمية',
+          type: 'lesson',
+          content: content,
+          grade: $('globalGradeSelect').value,
+          subject: $('globalSubjectSelect').value,
+          status: 'VERIFIED'
+        })
+      });
+      showToast('تم حفظ خطة الدرس في المشاريع بنجاح ✓');
+      loadProjects();
+    } catch (e) {
+      showToast('فشل الحفظ');
+    }
+  };
+
+  // Worksheet AI
+  $('btnGenerateWorksheetAI').onclick = async () => {
+    const title = $('wsTitleInput').value.trim();
+    const diff = $('wsDifficulty').value;
+    const grade = $('globalGradeSelect').value;
+    const subject = $('globalSubjectSelect').value;
+
+    $('wsContentText').value = '⏳ جاري تصميم ورقة العمل وتنسيق التمارين وسلم التصحيح...';
+
+    try {
+      const res = await fetch('/api/ai', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          task: 'worksheet',
+          prompt: `أنشئ ورقة عمل صفية جاهزة للطباعة لـ (${grade} - ${subject}):\nالموضوع: ${title}\nالمستوى: ${diff}\nتتضمن ترويسة مدرسية، تمارين متدرجة الصعوبة، ومفتاح الإجابة.`
+        })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error.message);
+      $('wsContentText').value = data.text;
+      showToast('تم إنشاء ورقة العمل بنجاح ✓');
+    } catch (err) {
+      $('wsContentText').value = '⚠️ خطأ: ' + err.message;
+    }
+  };
+
+  $('btnSaveWorksheetProject').onclick = async () => {
+    const content = $('wsContentText').value.trim();
+    if (!content) return showToast('المحتوى فارغ');
+    try {
+      await fetch('/api/projects', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: $('wsTitleInput').value.trim(),
+          type: 'worksheet',
+          content: content,
+          grade: $('globalGradeSelect').value,
+          subject: $('globalSubjectSelect').value,
+          status: 'VERIFIED'
+        })
+      });
+      showToast('تم حفظ ورقة العمل ✓');
+      loadProjects();
+    } catch (e) {
+      showToast('فشل الحفظ');
+    }
+  };
+
+  // Chat Execution
+  $('btnSendChat').onclick = async () => {
+    const txt = $('chatInputText').value.trim();
+    if (!txt) return;
+
+    appendChatMessage('user', txt);
+    $('chatInputText').value = '';
+
+    const assistantRow = appendChatMessage('assistant', '⏳ جاري المعالجة البيداغوجية...');
+
+    try {
+      const res = await fetch('/api/ai', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: txt, task: 'general' })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error.message);
+
+      assistantRow.querySelector('.chat-bubble-content').textContent = data.text || '';
+    } catch (err) {
+      assistantRow.querySelector('.chat-bubble-content').textContent = '⚠️ ' + err.message;
+    }
+  };
+
+  function appendChatMessage(role, text) {
+    const row = document.createElement('div');
+    row.className = `chat-bubble-row ${role}`;
+    row.innerHTML = `
+      <div class="chat-bubble">
+        <div class="chat-bubble-content">${escapeHtml(text)}</div>
+        ${role === 'assistant' ? `
+          <div class="bubble-actions">
+            <button class="btn btn-sm" onclick="copyBubbleText(this)">📋 نسخ</button>
+            <button class="btn btn-sm" onclick="sendBubbleToAuditor(this)">🔍 تدقيق</button>
+            <button class="btn btn-sm btn-primary" onclick="saveBubbleAsProject(this)">💾 حفظ كمشروع</button>
+          </div>
+        ` : ''}
+      </div>
+    `;
+    $('chatHistoryBox').appendChild(row);
+    $('chatHistoryBox').scrollTop = $('chatHistoryBox').scrollHeight;
+    return row;
+  }
+
+  window.copyBubbleText = function(btn) {
+    const txt = btn.closest('.chat-bubble').querySelector('.chat-bubble-content').textContent;
+    navigator.clipboard.writeText(txt);
+    showToast('تم النسخ إلى الحافظة ✓');
+  };
+
+  window.sendBubbleToAuditor = function(btn) {
+    const txt = btn.closest('.chat-bubble').querySelector('.chat-bubble-content').textContent;
+    switchView('auditor');
+    $('auditInputText').value = txt;
+  };
+
+  window.saveBubbleAsProject = async function(btn) {
+    const txt = btn.closest('.chat-bubble').querySelector('.chat-bubble-content').textContent;
+    await fetch('/api/projects', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        title: 'مخرج من المحادثة الذكية',
+        type: 'general',
+        content: txt,
+        status: 'VERIFIED'
+      })
+    });
+    showToast('تم الحفظ في المشاريع بنجاح ✓');
+    loadProjects();
+  };
+
+  // Auditor Runner
+  $('btnRunFullAudit').onclick = async () => {
+    const text = $('auditInputText').value.trim();
+    if (!text) return showToast('يرجى كتابة أو لصق النص للتدقيق');
+
+    $('auditResultBox').style.display = 'block';
+    $('auditReportOutput').textContent = '⏳ جاري التدقيق والفحص عبر الأبعاد السبعة ومطابقة المعايير...';
+
+    try {
+      const res = await fetch('/api/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          content: text,
+          targetGrade: $('globalGradeSelect').value,
+          targetSubject: $('globalSubjectSelect').value
+        })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error.message);
+
+      $('auditReportOutput').textContent = data.report || 'تم التدقيق بنجاح.';
+      showToast('اكتمل التدقيق البيداغوجي بنجاح ✓');
+    } catch (err) {
+      $('auditReportOutput').textContent = '⚠️ تعذر التدقيق: ' + err.message;
+    }
+  };
+
+  // Export Engine
+  window.exportDocument = async function(format) {
+    const content = $('exportContentText').value.trim();
+    if (!content) return showToast('المحتوى فارغ');
+
+    try {
+      const res = await fetch('/api/export', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: 'مخرج تعليمي — HAKIM Ω',
+          content: content,
+          format: format,
+          grade: $('globalGradeSelect').value,
+          subject: $('globalSubjectSelect').value
+        })
+      });
+      const data = await res.json();
+
+      if (format === 'html' || format === 'print') {
+        const w = window.open('', '_blank');
+        if (w) {
+          w.document.write(data.data);
+          w.document.close();
+          if (format === 'print') {
+            setTimeout(() => w.print(), 350);
+          }
+        }
+      } else if (format === 'docx' || format === 'markdown' || format === 'xlsx') {
+        const blob = new Blob([data.data || content], { type: 'text/plain;charset=utf-8' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `hakim_export_${Date.now()}.${format === 'docx' ? 'doc' : format === 'xlsx' ? 'csv' : 'md'}`;
+        a.click();
+        showToast('تم تحميل الملف بنجاح ✓');
+      }
+    } catch (e) {
+      showToast('فشل التصدير');
+    }
+  };
+
+  // File Dropzone
+  $('fileDropzone').onclick = () => $('mainFileInput').click();
+  $('mainFileInput').onchange = e => {
+    const files = Array.from(e.target.files);
+    files.forEach(f => {
+      const reader = new FileReader();
+      reader.onload = async evt => {
+        const raw = evt.target.result;
+        const res = await fetch('/api/files/process', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ fileName: f.name, fileType: f.type, rawContent: raw })
+        });
+        const d = await res.json();
+        state.uploadedFiles.push(d.file);
+        $('dashFilesCount').textContent = state.uploadedFiles.length;
+        renderUploadedFiles();
+      };
+      reader.readAsText(f);
+    });
+  };
+
+  function renderUploadedFiles() {
+    const box = $('uploadedFilesTable');
+    if (!state.uploadedFiles.length) {
+      box.innerHTML = '<p style="color: var(--text-muted); font-size: 13px;">لم يتم رفع أي ملفات حتى الآن.</p>';
+      return;
+    }
+    box.innerHTML = state.uploadedFiles.map(f => `
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: #ffffff; border: 1px solid var(--border-subtle); border-radius: 6px; margin-bottom: 6px;">
+        <span style="font-weight: 600; font-size: 13.5px;">📄 ${escapeHtml(f.name)}</span>
+        <span style="font-size: 12px; color: var(--text-muted);">${f.totalWords} كلمة (~${f.estimatedTokens} رمز)</span>
+      </div>
+    `).join('');
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  // Init
+  fetchServerConfig();
+  loadCompetencies();
+  loadProjects();
+</script>
+
+</body>
+</html>

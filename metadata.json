@@ -1,0 +1,8 @@
+{
+  "name": "HAKIM Ω — مساحة العمل التعليمية",
+  "description": "مساحة العمل التعليمية حكيم Ω لتحويل الأهداف التربوية إلى دروس وأوراق عمل وتقويمات وخريطة كفايات مع تحليل الملفات ودعم الذكاء الاصطناعي.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
