@@ -23,6 +23,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Configure institutional auth configuration
+        shell: bash
+        env:
+          M365_CLIENT_ID: ${{ secrets.M365_CLIENT_ID }}
+        run: |
+          printf 'window.HAKIM_M365_CONFIG={clientId:%q};\n' "$M365_CLIENT_ID" > m365-config.js
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          guard = '''<script>(function(){try{var a=localStorage.getItem('hakim_m365_account');if(!a){location.replace('login.html');}}catch(e){location.replace('login.html');}})();</script>'''
+          if guard not in s:
+              s=s.replace('<head>', '<head>'+guard, 1)
+              p.write_text(s, encoding='utf-8')
+          PY
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
